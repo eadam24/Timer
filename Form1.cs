@@ -13,19 +13,28 @@ namespace Timer
             InitializeComponent();
         }
 
-        private void time_button_Click(object sender, EventArgs e)
+        private void start_button_Click(object sender, EventArgs e)
         {
-            if (time_button.Text.Equals("Start Time"))
-            {
-                time_button.Text = "Stop Time";
+           
                 timer1.Enabled = true;
-            }
-            else
-            {
-                time_button.Text = "Start Time";
-                timer1.Enabled = false;
+            
 
-            }
+        }
+
+        private void stop_button_Click(object sender, EventArgs e)
+        {
+           
+            timer1.Enabled = false;
+        }
+
+        private void reset_button_Click(object sender, EventArgs e)
+        {
+            seconds = 0;
+            seconds_label.Text = $"0{seconds.ToString()}";
+            minutes = 0;
+            seconds_label.Text = $"0{seconds.ToString()}";
+            hours = 0;
+            seconds_label.Text = $"0{seconds.ToString()}";
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -66,5 +75,7 @@ namespace Timer
                 hours++;
             }
         }
+
+       
     }
 }

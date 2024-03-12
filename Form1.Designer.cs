@@ -29,24 +29,26 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            time_button = new Button();
+            start_button = new Button();
             seconds_label = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
             minutes_label = new Label();
             hours_label = new Label();
             groupBox1 = new GroupBox();
+            stop_button = new Button();
+            reset_button = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
-            // time_button
+            // start_button
             // 
-            time_button.Location = new Point(176, 248);
-            time_button.Name = "time_button";
-            time_button.Size = new Size(145, 47);
-            time_button.TabIndex = 0;
-            time_button.Text = "Start Time";
-            time_button.UseVisualStyleBackColor = true;
-            time_button.Click += time_button_Click;
+            start_button.Location = new Point(176, 248);
+            start_button.Name = "start_button";
+            start_button.Size = new Size(145, 47);
+            start_button.TabIndex = 0;
+            start_button.Text = "Start";
+            start_button.UseVisualStyleBackColor = true;
+            start_button.Click += start_button_Click;
             // 
             // seconds_label
             // 
@@ -94,13 +96,35 @@
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             // 
+            // stop_button
+            // 
+            stop_button.Location = new Point(176, 301);
+            stop_button.Name = "stop_button";
+            stop_button.Size = new Size(145, 47);
+            stop_button.TabIndex = 5;
+            stop_button.Text = "Stop";
+            stop_button.UseVisualStyleBackColor = true;
+            stop_button.Click += stop_button_Click;
+            // 
+            // reset_button
+            // 
+            reset_button.Location = new Point(176, 354);
+            reset_button.Name = "reset_button";
+            reset_button.Size = new Size(145, 46);
+            reset_button.TabIndex = 6;
+            reset_button.Text = "Reset";
+            reset_button.UseVisualStyleBackColor = true;
+            reset_button.Click += reset_button_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(512, 459);
+            Controls.Add(reset_button);
+            Controls.Add(stop_button);
             Controls.Add(groupBox1);
-            Controls.Add(time_button);
+            Controls.Add(start_button);
             Name = "Form1";
             Text = "Form1";
             groupBox1.ResumeLayout(false);
@@ -110,11 +134,13 @@
 
         #endregion
 
-        private Button time_button;
+        private Button start_button;
         private Label seconds_label;
         private System.Windows.Forms.Timer timer1;
         private Label minutes_label;
         private Label hours_label;
         private GroupBox groupBox1;
+        private Button stop_button;
+        private Button reset_button;
     }
 }
