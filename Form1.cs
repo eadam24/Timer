@@ -15,14 +15,14 @@ namespace Timer
 
         private void time_button_Click(object sender, EventArgs e)
         {
-            if (time_button.Text.Equals("Show Time"))
+            if (time_button.Text.Equals("Start Time"))
             {
                 time_button.Text = "Stop Time";
                 timer1.Enabled = true;
             }
             else
             {
-                time_button.Text = "Show Time";
+                time_button.Text = "Start Time";
                 timer1.Enabled = false;
 
             }

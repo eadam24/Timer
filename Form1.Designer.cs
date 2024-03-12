@@ -34,6 +34,8 @@
             timer1 = new System.Windows.Forms.Timer(components);
             minutes_label = new Label();
             hours_label = new Label();
+            groupBox1 = new GroupBox();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // time_button
@@ -42,18 +44,18 @@
             time_button.Name = "time_button";
             time_button.Size = new Size(145, 47);
             time_button.TabIndex = 0;
-            time_button.Text = "Show Time";
+            time_button.Text = "Start Time";
             time_button.UseVisualStyleBackColor = true;
             time_button.Click += time_button_Click;
             // 
             // seconds_label
             // 
             seconds_label.AutoSize = true;
-            seconds_label.Location = new Point(285, 205);
+            seconds_label.Location = new Point(127, 44);
             seconds_label.Name = "seconds_label";
-            seconds_label.Size = new Size(36, 25);
+            seconds_label.Size = new Size(40, 32);
             seconds_label.TabIndex = 1;
-            seconds_label.Text = ":00";
+            seconds_label.Text = "00";
             // 
             // timer1
             // 
@@ -63,35 +65,47 @@
             // minutes_label
             // 
             minutes_label.AutoSize = true;
-            minutes_label.Location = new Point(243, 205);
+            minutes_label.Location = new Point(69, 44);
             minutes_label.Name = "minutes_label";
-            minutes_label.Size = new Size(36, 25);
+            minutes_label.Size = new Size(45, 32);
             minutes_label.TabIndex = 2;
-            minutes_label.Text = ":00";
+            minutes_label.Text = "00:";
             // 
             // hours_label
             // 
             hours_label.AutoSize = true;
-            hours_label.Location = new Point(200, 205);
+            hours_label.Location = new Point(16, 44);
             hours_label.Name = "hours_label";
-            hours_label.Size = new Size(32, 25);
+            hours_label.Size = new Size(45, 32);
             hours_label.TabIndex = 3;
-            hours_label.Text = "00";
+            hours_label.Text = "00:";
             hours_label.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // groupBox1
+            // 
+            groupBox1.BackColor = Color.AliceBlue;
+            groupBox1.Controls.Add(hours_label);
+            groupBox1.Controls.Add(seconds_label);
+            groupBox1.Controls.Add(minutes_label);
+            groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            groupBox1.Location = new Point(160, 155);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(178, 87);
+            groupBox1.TabIndex = 4;
+            groupBox1.TabStop = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(512, 459);
-            Controls.Add(hours_label);
-            Controls.Add(minutes_label);
-            Controls.Add(seconds_label);
+            Controls.Add(groupBox1);
             Controls.Add(time_button);
             Name = "Form1";
             Text = "Form1";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -101,5 +115,6 @@
         private System.Windows.Forms.Timer timer1;
         private Label minutes_label;
         private Label hours_label;
+        private GroupBox groupBox1;
     }
 }
