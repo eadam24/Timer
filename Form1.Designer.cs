@@ -42,12 +42,13 @@
             // 
             // start_button
             // 
+            start_button.BackColor = SystemColors.InactiveCaption;
             start_button.Location = new Point(176, 248);
             start_button.Name = "start_button";
             start_button.Size = new Size(145, 47);
             start_button.TabIndex = 0;
             start_button.Text = "Start";
-            start_button.UseVisualStyleBackColor = true;
+            start_button.UseVisualStyleBackColor = false;
             start_button.Click += start_button_Click;
             // 
             // seconds_label
@@ -85,11 +86,12 @@
             // 
             // groupBox1
             // 
-            groupBox1.BackColor = Color.AliceBlue;
+            groupBox1.BackColor = Color.White;
             groupBox1.Controls.Add(hours_label);
             groupBox1.Controls.Add(seconds_label);
             groupBox1.Controls.Add(minutes_label);
             groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            groupBox1.ForeColor = Color.DarkBlue;
             groupBox1.Location = new Point(160, 155);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(178, 87);
@@ -98,28 +100,31 @@
             // 
             // stop_button
             // 
+            stop_button.BackColor = SystemColors.InactiveCaption;
             stop_button.Location = new Point(176, 301);
             stop_button.Name = "stop_button";
             stop_button.Size = new Size(145, 47);
             stop_button.TabIndex = 5;
             stop_button.Text = "Stop";
-            stop_button.UseVisualStyleBackColor = true;
+            stop_button.UseVisualStyleBackColor = false;
             stop_button.Click += stop_button_Click;
             // 
             // reset_button
             // 
+            reset_button.BackColor = SystemColors.InactiveCaption;
             reset_button.Location = new Point(176, 354);
             reset_button.Name = "reset_button";
             reset_button.Size = new Size(145, 46);
             reset_button.TabIndex = 6;
             reset_button.Text = "Reset";
-            reset_button.UseVisualStyleBackColor = true;
+            reset_button.UseVisualStyleBackColor = false;
             reset_button.Click += reset_button_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlLight;
             ClientSize = new Size(512, 459);
             Controls.Add(reset_button);
             Controls.Add(stop_button);

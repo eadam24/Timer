@@ -15,15 +15,15 @@ namespace Timer
 
         private void start_button_Click(object sender, EventArgs e)
         {
-           
-                timer1.Enabled = true;
-            
+
+            timer1.Enabled = true;
+
 
         }
 
         private void stop_button_Click(object sender, EventArgs e)
         {
-           
+
             timer1.Enabled = false;
         }
 
@@ -76,6 +76,6 @@ namespace Timer
             }
         }
 
-       
+
     }
 }
